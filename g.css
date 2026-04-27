@@ -21,6 +21,12 @@ h5{
     margin-bottom: 20px;
     color: #1877f2;
 }
+img{
+    display: block;
+    margin: 0 auto 20px;
+    width: 50px;
+    color: #10161f;
+}
 input{
     width: 100%;
     padding: 10px;
@@ -40,16 +46,24 @@ button{
 button:hover{
     background-color: #165cbb;
 }
+h4{
+    margin-top: 10px;
+    font-size: smaller;
+    text-align: center;
+}
 h4 a{
-    color: #1877f2;
+    color: #10161f;
     text-decoration: none;
 }
 h4 a:hover{
     box-shadow:0 2px 4px rgba(0, 0, 0, 0.1);
 }
 button:last-child{
-    background-color: #42b72a;
+    color: #1877f2;
+    border-color: #165cbb;
+    background-color: #e7f3ff;
+    margin-top: 10px;
 }
 button:last-child:hover{
-    background-color: #36a420;
+    background-color: #e7edf2;
 }
