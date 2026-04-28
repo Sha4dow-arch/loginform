@@ -8,7 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #ededee;
 }
 form{
     background-color: white;
@@ -37,7 +37,7 @@ input{
 button{
     width: 100%;
     padding: 10px;
-    background-color: #1877f2;
+    background-color: #d6d8db;
     color: white;
     border: none;
     border-radius: 4px;
@@ -66,4 +66,12 @@ button:last-child{
 }
 button:last-child:hover{
     background-color: #e7edf2;
+}
+@media screen and (max-width: 400px){
+    form{
+        width: 90%;
+    }
+    body{
+        padding: 100px;
+    }
 }
