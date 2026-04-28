@@ -28,6 +28,10 @@ img{
     width: 30px;
     color: #10161f;
 }
+span{
+    margin-left: 0px;
+    color:#10161f;
+}
 input{
     width: 100%;
     padding: 10px;
