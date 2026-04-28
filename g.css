@@ -22,9 +22,10 @@ h5{
     color: #1877f2;
 }
 img{
-    display: block;
+    display:flex;
+    justify-content: left;
     margin: 0 auto 20px;
-    width: 50px;
+    width: 30px;
     color: #10161f;
 }
 input{
@@ -37,7 +38,7 @@ input{
 button{
     width: 100%;
     padding: 10px;
-    background-color: #d6d8db;
+    background-color: #407cd5;
     color: white;
     border: none;
     border-radius: 4px;
@@ -45,6 +46,14 @@ button{
 }
 button:hover{
     background-color: #165cbb;
+}
+.btn{
+    background-color: #fff;
+    color: #1877f2;
+    border: 1px solid #1877f2;
+}
+.btn:hover{
+    background-color: #e7e9ed;
 }
 h4{
     margin-top: 10px;
@@ -67,7 +76,7 @@ button:last-child{
 button:last-child:hover{
     background-color: #e7edf2;
 }
-@media screen and (max-width: 400px){
+@media screen and (min-width: 1280px){
     form{
         width: 90%;
     }
