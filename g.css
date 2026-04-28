@@ -22,10 +22,13 @@ h5{
     color: #1877f2;
 }
 h6 img{
+    display: block;
     width: 20px;
     height: 20px;
-    margin-right: 5px;
-    vertical-align: middle;
+    margin: auto;
+}
+h6{
+    text-align: center;
 }
 h5 img{
     width: 20px;
