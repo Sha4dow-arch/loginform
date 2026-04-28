@@ -21,16 +21,17 @@ h5{
     margin-bottom: 20px;
     color: #1877f2;
 }
-img{
-    display:flex;
-    justify-content: left;
-    margin: 0 auto 20px;
-    width: 30px;
-    color: #10161f;
+h6 img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
-span{
-    margin-left: 0px;
-    color:#10161f;
+h5 img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 input{
     width: 100%;
@@ -82,9 +83,6 @@ button:last-child:hover{
 }
 @media screen and (min-width: 1280px){
     form{
-        width: 90%;
-    }
-    body{
-        padding: 100px;
+        width: 500px;
     }
 }
