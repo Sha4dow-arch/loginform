@@ -1,180 +1,180 @@
-:root {
-    --background-start: #f2f6fc;
-    --background-end: #dfe6f3;
-    --card-bg: #ffffff;
-    --card-border: rgba(31, 40, 56, 0.08);
-    --text-primary: #13293a;
-    --text-secondary: #5d6d85;
-    --accent: #1877f2;
-    --accent-dark: #1558c5;
-    --button-secondary: #f0f4fd;
+:root { /* define reusable theme colors and values */
+    --background-start: #f2f6fc; /* top background color */
+    --background-end: #dfe6f3; /* bottom background color */
+    --card-bg: #ffffff; /* card background color */
+    --card-border: rgba(31, 40, 56, 0.08); /* card border shadow */
+    --text-primary: #13293a; /* main text color */
+    --text-secondary: #5d6d85; /* secondary text color */
+    --accent: #1877f2; /* primary accent color */
+    --accent-dark: #1558c5; /* accent color on hover */
+    --button-secondary: #f0f4fd; /* secondary button background */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { /* reset spacing and convert box-sizing */
+    margin: 0; /* remove default margins */
+    padding: 0; /* remove default padding */
+    box-sizing: border-box; /* include border in size calculation */
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    background: linear-gradient(180deg, var(--background-start), var(--background-end));
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: var(--text-primary);
+body { /* page background and layout */
+    min-height: 100vh; /* fill full viewport height */
+    display: flex; /* center content horizontally */
+    justify-content: center; /* center content horizontally */
+    align-items: center; /* center content vertically */
+    padding: 24px; /* page padding */
+    background: linear-gradient(180deg, var(--background-start), var(--background-end)); /* gradient background */
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* font stack */
+    color: var(--text-primary); /* default text color */
 }
 
-.wrapper {
-    width: min(100%, 520px);
-    margin: 0 auto;
+.wrapper { /* centered wrapper width limit */
+    width: min(100%, 520px); /* responsive container width */
+    margin: 0 auto; /* center the wrapper */
 }
 
-form {
-    width: 100%;
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 22px;
-    padding: 32px;
-    box-shadow: 0 24px 60px rgba(19, 41, 58, 0.08);
+form { /* form card style */
+    width: 100%; /* take full wrapper width */
+    background-color: var(--card-bg); /* white card background */
+    border: 1px solid var(--card-border); /* subtle border */
+    border-radius: 22px; /* rounded corners */
+    padding: 32px; /* card padding */
+    box-shadow: 0 24px 60px rgba(19, 41, 58, 0.08); /* soft shadow */
 }
 
-h5 {
-    margin-bottom: 24px;
-    font-size: 1.6rem;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 12px;
+h5 { /* form title styling */
+    margin-bottom: 24px; /* space below title */
+    font-size: 1.6rem; /* larger heading font */
+    letter-spacing: -0.02em; /* tighter letter spacing */
+    color: var(--text-primary); /* heading color */
+    display: flex; /* align icon and text */
+    align-items: center; /* vertical center */
+    gap: 12px; /* spacing between icon and text */
 }
 
-h5 img {
-    width: 22px;
-    height: 22px;
+h5 img { /* title icon size */
+    width: 22px; /* fixed icon width */
+    height: 22px; /* fixed icon height */
 }
 
-input {
-    width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 14px;
-    border: 1px solid rgba(20, 40, 63, 0.12);
-    border-radius: 14px;
-    background: #fcfdff;
-    color: var(--text-primary);
-    font-size: 1rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+input { /* input field styling */
+    width: 100%; /* full width fields */
+    padding: 14px 16px; /* inner padding */
+    margin-bottom: 14px; /* vertical spacing */
+    border: 1px solid rgba(20, 40, 63, 0.12); /* light border */
+    border-radius: 14px; /* rounded corners */
+    background: #fcfdff; /* input background */
+    color: var(--text-primary); /* input text color */
+    font-size: 1rem; /* normal font size */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* smooth focus effect */
 }
 
-input::placeholder {
-    color: rgba(20, 40, 63, 0.4);
+input::placeholder { /* placeholder styling */
+    color: rgba(20, 40, 63, 0.4); /* lighter placeholder text */
 }
 
-input:focus {
-    outline: none;
-    border-color: rgba(24, 119, 242, 0.5);
-    box-shadow: 0 0 0 4px rgba(24, 119, 242, 0.12);
+input:focus { /* focus state for inputs */
+    outline: none; /* remove default focus outline */
+    border-color: rgba(24, 119, 242, 0.5); /* highlight border */
+    box-shadow: 0 0 0 4px rgba(24, 119, 242, 0.12); /* focus glow */
 }
 
-button {
-    width: 100%;
-    padding: 14px 16px;
-    margin-top: 8px;
-    background-color: var(--accent);
-    color: white;
-    border: none;
-    border-radius: 14px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+button { /* primary button styling */
+    width: 100%; /* full width button */
+    padding: 14px 16px; /* button padding */
+    margin-top: 8px; /* space above button */
+    background-color: var(--accent); /* primary button color */
+    color: white; /* button label color */
+    border: none; /* remove border */
+    border-radius: 14px; /* rounded button */
+    font-size: 1rem; /* button text size */
+    font-weight: 600; /* medium bold label */
+    cursor: pointer; /* pointer cursor */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; /* smooth hover */
 }
 
-button:hover {
-    background-color: var(--accent-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 16px 32px rgba(24, 119, 242, 0.18);
+button:hover { /* hover state for primary button */
+    background-color: var(--accent-dark); /* darker button color */
+    transform: translateY(-1px); /* lift effect */
+    box-shadow: 0 16px 32px rgba(24, 119, 242, 0.18); /* shadow on hover */
 }
 
-.btn {
-    margin-top: 12px;
-    background-color: var(--button-secondary);
-    color: var(--accent);
-    border: 1px solid rgba(24, 119, 242, 0.25);
+.btn { /* secondary button styling */
+    margin-top: 12px; /* extra spacing at top */
+    background-color: var(--button-secondary); /* muted background */
+    color: var(--accent); /* accent text color */
+    border: 1px solid rgba(24, 119, 242, 0.25); /* subtle border */
 }
 
-.btn:hover {
-    background-color: #ebf2ff;
+.btn:hover { /* hover state for secondary button */
+    background-color: #ebf2ff; /* slightly darker background */
 }
 
-h4 {
-    margin-top: 18px;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    text-align: center;
+h4 { /* small helper link block */
+    margin-top: 18px; /* spacing above text */
+    font-size: 0.95rem; /* smaller font size */
+    color: var(--text-secondary); /* muted text color */
+    text-align: center; /* centered text */
 }
 
-h4 a {
-    color: var(--accent);
-    text-decoration: none;
+h4 a { /* helper link styling */
+    color: var(--accent); /* accent link color */
+    text-decoration: none; /* remove underline */
 }
 
-h4 a:hover {
-    text-decoration: underline;
+h4 a:hover { /* hover state for helper link */
+    text-decoration: underline; /* underline on hover */
 }
 
-h6 {
-    margin-top: 24px;
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+h6 { /* footer text under form */
+    margin-top: 24px; /* spacing above footer */
+    text-align: center; /* centered footer text */
+    color: var(--text-secondary); /* muted footer color */
+    font-size: 0.95rem; /* small footer font */
 }
 
-h6 img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
+h6 img { /* footer icon styling */
+    width: 20px; /* icon width */
+    height: 20px; /* icon height */
+    margin-right: 10px; /* spacing to text */
+    vertical-align: middle; /* align with text */
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 520px) { /* mobile layout adjustments */
     body {
-        padding: 16px;
+        padding: 16px; /* smaller page padding */
     }
 
     form {
-        padding: 24px;
+        padding: 24px; /* smaller card padding */
     }
 
     h5 {
-        font-size: 1.4rem;
+        font-size: 1.4rem; /* smaller heading on mobile */
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) { /* tablet layout adjustments */
     .wrapper {
-        width: min(100%, 640px);
+        width: min(100%, 640px); /* wider wrapper on tablet */
     }
 
     form {
-        padding: 36px;
+        padding: 36px; /* slightly larger card padding */
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) { /* desktop layout adjustments */
     body {
-        background: linear-gradient(135deg, #e7eefc 0%, #d9e5f7 35%, #f4f8fe 100%);
-        padding: 40px;
+        background: linear-gradient(135deg, #e7eefc 0%, #d9e5f7 35%, #f4f8fe 100%); /* richer desktop background */
+        padding: 40px; /* extra page padding */
     }
 
     .wrapper {
-        width: min(100%, 740px);
+        width: min(100%, 740px); /* wider wrapper on desktop */
     }
 
     form {
-        width: 560px;
-        padding: 40px;
+        width: 560px; /* fixed desktop form width */
+        padding: 40px; /* larger desktop padding */
     }
 }
