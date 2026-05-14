@@ -1,91 +1,180 @@
-*{
+:root {
+    --background-start: #f2f6fc;
+    --background-end: #dfe6f3;
+    --card-bg: #ffffff;
+    --card-border: rgba(31, 40, 56, 0.08);
+    --text-primary: #13293a;
+    --text-secondary: #5d6d85;
+    --accent: #1877f2;
+    --accent-dark: #1558c5;
+    --button-secondary: #f0f4fd;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #ededee;
+    padding: 24px;
+    background: linear-gradient(180deg, var(--background-start), var(--background-end));
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text-primary);
 }
-form{
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
+
+.wrapper {
+    width: min(100%, 520px);
+    margin: 0 auto;
 }
-h5{
-    margin-bottom: 20px;
-    color: #1877f2;
+
+form {
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 24px 60px rgba(19, 41, 58, 0.08);
 }
-h6 img{
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin: auto;
+
+h5 {
+    margin-bottom: 24px;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
-h6{
+
+h5 img {
+    width: 22px;
+    height: 22px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(20, 40, 63, 0.12);
+    border-radius: 14px;
+    background: #fcfdff;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder {
+    color: rgba(20, 40, 63, 0.4);
+}
+
+input:focus {
+    outline: none;
+    border-color: rgba(24, 119, 242, 0.5);
+    box-shadow: 0 0 0 4px rgba(24, 119, 242, 0.12);
+}
+
+button {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 8px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 16px 32px rgba(24, 119, 242, 0.18);
+}
+
+.btn {
+    margin-top: 12px;
+    background-color: var(--button-secondary);
+    color: var(--accent);
+    border: 1px solid rgba(24, 119, 242, 0.25);
+}
+
+.btn:hover {
+    background-color: #ebf2ff;
+}
+
+h4 {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
     text-align: center;
 }
-h5 img{
+
+h4 a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+h4 a:hover {
+    text-decoration: underline;
+}
+
+h6 {
+    margin-top: 24px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+h6 img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
     vertical-align: middle;
 }
-input{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+@media screen and (max-width: 520px) {
+    body {
+        padding: 16px;
+    }
+
+    form {
+        padding: 24px;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
 }
-button{
-    width: 100%;
-    padding: 10px;
-    background-color: #407cd5;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        width: min(100%, 640px);
+    }
+
+    form {
+        padding: 36px;
+    }
 }
-button:hover{
-    background-color: #165cbb;
-}
-.btn{
-    background-color: #fff;
-    color: #1877f2;
-    border: 1px solid #1877f2;
-}
-.btn:hover{
-    background-color: #e7e9ed;
-}
-h4{
-    margin-top: 10px;
-    font-size: smaller;
-    text-align: center;
-}
-h4 a{
-    color: #10161f;
-    text-decoration: none;
-}
-h4 a:hover{
-    box-shadow:0 2px 4px rgba(0, 0, 0, 0.1);
-}
-button:last-child{
-    color: #1877f2;
-    border-color: #165cbb;
-    background-color: #e7f3ff;
-    margin-top: 10px;
-}
-button:last-child:hover{
-    background-color: #e7edf2;
-}
-@media screen and (min-width: 1280px){
-    form{
-        width: 500px;
+
+@media screen and (min-width: 1280px) {
+    body {
+        background: linear-gradient(135deg, #e7eefc 0%, #d9e5f7 35%, #f4f8fe 100%);
+        padding: 40px;
+    }
+
+    .wrapper {
+        width: min(100%, 740px);
+    }
+
+    form {
+        width: 560px;
+        padding: 40px;
     }
 }
