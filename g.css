@@ -63,13 +63,16 @@ input { /* input field styling */
     border: 1px solid rgba(20, 40, 63, 0.12); /* light border */
     border-radius: 14px; /* rounded corners */
     background: #fcfdff; /* input background */
-    color: var(--text-primary); /* input text color */
-    font-size: 1rem; /* normal font size */
+    color: var(--text-primary); /* darker, more readable input text */
+    font-size: 1.05rem; /* slightly larger for readability */
+    font-weight: 500; /* bolder text for clarity */
+    letter-spacing: 0.01em; /* subtle tracking */
+    line-height: 1.4;
     transition: border-color 0.2s ease, box-shadow 0.2s ease; /* smooth focus effect */
 }
 
 input::placeholder { /* placeholder styling */
-    color: rgba(20, 40, 63, 0.4); /* lighter placeholder text */
+    color: rgba(19, 41, 58, 0.5); /* clearer placeholder contrast */
 }
 
 input:focus { /* focus state for inputs */
